@@ -1,0 +1,5 @@
+#!/bin/sh
+
+$NISD_DIR/bin/usr.bin/bash/bash-5.0/configure --host=x86_64-hydra
+make -j$(nproc)
+make DESTDIR=$NISD_DIR/build/iso/root/ install
